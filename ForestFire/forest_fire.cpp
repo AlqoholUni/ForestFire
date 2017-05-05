@@ -23,10 +23,10 @@ void ForestFire::create()
 	// Adds neighbours to 10, 10 (center of grid)
 	auto center = Tree::addNeighbours(10, 10);
 	// Randomizes based on current time
-	srand(time(nullptr));
-	auto randomr = rand() % 19 + 1;
-	srand(time(nullptr));
-	auto randomc = rand() % 19 + 1;
+	//srand(time(nullptr));
+	//auto randomr = rand() % 19 + 1;
+	//srand(time(nullptr));
+	//auto randomc = rand() % 19 + 1;
 
 	// Loops through all rows and columns
 	for (auto r = 0; r < 21; r++)
@@ -39,8 +39,8 @@ void ForestFire::create()
 			else if (c == 0 || c == 20)
 				map[r][c] = new TreeSide();
 			// Assigns a random starting tree that's burning
-			else if (r == randomr && c == randomc)
-				map[r][c] = new TreeBurning();
+			//else if (r == randomr && c == randomc)
+			//	map[r][c] = new TreeBurning();
 
 			// Debug screen
 			if (r == 8 && c == 20)
@@ -64,7 +64,7 @@ void ForestFire::create()
 		}
 		cout << endl;
 	}
-	map[randomr][randomc]->setNextStatus(kTreeBurning);
+	//map[randomr][randomc]->setNextStatus(kTreeBurning);
 }
 
 /**

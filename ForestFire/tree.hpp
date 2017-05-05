@@ -12,7 +12,7 @@ enum eTreeState : char
 	kTreeSide = '|',
 	kTreeAlive = '^',
 	kTreeBurning = 'X',
-	kTreeEmpty = '.'
+	kTreeEmpty = ' ' // '.'
 };
 
 /**
